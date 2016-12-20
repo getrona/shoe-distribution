@@ -1,1 +1,0 @@
-class Shoe_Brands
