@@ -26,12 +26,12 @@ if youy run into any issues or have questions, ideas or concerns.  Please contac
 
 ## Technologies Used
 
-*ActiveRecord
-*sinatra
-*Ruby
+* ActiveRecord
+* sinatra
+* Ruby
 
 ### License
 
-*Epicodus, All Rights Reserved.
+* Epicodus, All Rights Reserved.
 
-Copyright (c) 2016 ** Getro Naissance **
+Copyright (c) 2016  Getro Naissance 
