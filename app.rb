@@ -29,7 +29,7 @@ get('/brands') do
 end
 
 post('/brands') do
-  description = params.fetch('name').capitalize()
+  description = params.fetch('name').titlecase()
   Brand.new({:description => description}).save()
   @brands = Brand.all()
   erb(:shoe_brands)

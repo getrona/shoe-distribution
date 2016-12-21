@@ -1,6 +1,6 @@
 <div class="jumbotron">
-  <h1>Shoe Distribution Center</h1>
-  <p><h1>Brands</h1></p>
+  <h1>:::Welcome to :::</h1>
+
 </div>
 
 <% if @brands.any? %>
@@ -22,8 +22,8 @@
 <form action="/brands" method="post">
   <div class="form-group">
     <label class="form-label" for="name">Add a Shoe Brand</label>
-    <input class="form-control" id="name" type="text" name="name" placeholder="Enter Store Name Here">
-    <button type="submit" class="button btn">Submit!</button>
+    <input class="form-control" id="name" type="text" name="name" required placeholder="Enter Store Name Here"> <br>
+    <button type="submit" class=" btn">Submit!</button>
   </div>
 </form>
 
