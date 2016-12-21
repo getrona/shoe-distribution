@@ -15,6 +15,6 @@ RSpec.configure do |config|
     Brand.all().each() do |brand|
       brand.destroy()
     end
-    
+
   end
 end

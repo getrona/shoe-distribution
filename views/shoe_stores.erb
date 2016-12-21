@@ -1,0 +1,34 @@
+<div class="jumbotron">
+  <h1>Shoe Distribution Center</h1>
+  <p><h1>Stores</h1></p>
+</div>
+
+<% if @stores.any? %>
+<h1>Here is a list of all of the stores</h1>
+<ul>
+  <% @stores.each() do |store| %>
+  <li><a href="/stores/<%=store.id()%>"><%=store.description%></a></li>
+  <% end %>
+</ul>
+<% else %>
+  <h1>The Store Database is currently empty.</h1>
+<% end %>
+
+<hr>
+<hr>
+<hr>
+
+<h1>Create a shoe store </h1>
+<form action="/stores" method="post">
+  <div class="form-group">
+    <label class="form-label" for="name">Add a Store</label>
+    <input class="form-control" id="name" type="text" name="name" placeholder="Enter Store Name Here">
+    <button type="submit" class="button btn">Submit!</button>
+  </div>
+</form>
+
+<hr>
+<hr>
+<hr>
+
+<button type="submit" class="btn"><a href="/">Home</a></button>

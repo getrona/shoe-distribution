@@ -1,0 +1,60 @@
+<div class="jumbotron">
+  <h1>Shoe Distribution Center</h1>
+  <p><h1><%=@store.description()%></h1></p>
+</div>
+<hr>
+
+<form action="/stores/<%=@store.id()%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">Rename the Store:</label>
+  <input id="name" type="text" name="name">
+  <button type="submit" class="btn">Update</button>
+</form>
+
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<hr>
+
+
+<h1>Add an existing shoe Brand to <%=@store.description()%></h1>
+<form action="/stores/<%= @store.id() %>" method="post">
+ <% @brands.each() do |brand| %>
+   <div class="checkbox">
+     <label>
+       <input type="checkbox" name="brand_id" value="<%= brand.id() %>"><%= brand.description() %>
+     </label>
+   </div>
+    <% end %>
+  <fieldset><button type="submit" class="btn btn-primary">Add Brand</button></fieldset>
+</form>
+
+<hr>
+<hr>
+<hr>
+
+<% if @store.brands.any?() %>
+  <h1>Here is a comprehensive list of Brands in <%=@store.description()%>:</h1>
+  <ul>
+    <% @store.brands.each() do |brand| %>
+    <li> <a href="/brands/<%=brand.id()%>"><%=brand.description%></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <h1>There are currently no Brands in this store.</h1>
+<% end %>
+
+<hr>
+<hr>
+<hr>
+
+<form action="/stores/<%=@store.id()%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Delete Store</button>
+</form>
+
+<hr>
+
+<button type="submit" class="btn"><a href="/">Home</a></button>
