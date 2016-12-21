@@ -1,5 +1,5 @@
 require('spec_helper')
 
-describe(Store) do
+describe(Brand) do
   
 end
