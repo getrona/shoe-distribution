@@ -3,7 +3,9 @@ require("rspec")
 require("pg")
 require("sinatra/activerecord")
 require("store")
+require("shoulda-matchers")
 require("brand")
+require("shoulda-matchers")
 
 RSpec.configure do |config|
   config.after(:each) do

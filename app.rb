@@ -17,7 +17,7 @@ get('/stores') do
 end
 
 post('/stores') do
-  description = params.fetch('name').capitalize()
+  description = params.fetch('name')
   Store.new({:description => description}).save()
   @stores = Store.all()
   erb(:shoe_stores)
@@ -29,7 +29,7 @@ get('/brands') do
 end
 
 post('/brands') do
-  description = params.fetch('name').titlecase()
+  description = params.fetch('name')
   Brand.new({:description => description}).save()
   @brands = Brand.all()
   erb(:shoe_brands)
